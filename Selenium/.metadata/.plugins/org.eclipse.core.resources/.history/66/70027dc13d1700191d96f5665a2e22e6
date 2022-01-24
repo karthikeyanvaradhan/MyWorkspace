@@ -1,0 +1,33 @@
+package com.java.oops;
+
+public class Encap {
+
+	private String qaName;
+	private int yearOfExperience;
+
+	public String getQaName() {
+		return qaName;
+	}
+
+	public void setQaName(String qaName) {
+		this.qaName = qaName;
+	}
+
+	public int getYearOfExperience() {
+		return yearOfExperience;
+	}
+
+	public void setYearOfExperience(double d) {
+		this.yearOfExperience = d;
+	}
+	
+	
+	public static void main(String args[]){
+		
+		Encap en = new Encap();
+		en.setQaName("Karthikeyan");
+		en.setYearOfExperience(7.5);
+		
+	}
+
+}

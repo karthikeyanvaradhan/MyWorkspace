@@ -1,0 +1,20 @@
+package faith.success;
+
+/*String Variables are mutable i.e The value can be changed*/ 
+
+
+public class StringBuilderBufferClass {
+
+	public static void main(String[] args) {
+
+
+		StringBuffer stbuffer = new StringBuffer("Karthikeyan");
+		//StringBuffer reverse = stbuffer.reverse();
+		//System.out.println(reverse);
+		
+		stbuffer.append("Mukesh");
+		System.out.println(stbuffer);
+
+	}
+
+}

@@ -1,0 +1,5 @@
+LoginIdElement=//input[@id='user-name']
+LoginPwdElement=//input[@id='password']
+LoginBtnElement=
+LoginId=standard_user
+LoginPwd=secret_sauce

@@ -1,0 +1,38 @@
+package com.test.programs.AbstractionTest;
+
+public class AccessSpecifiers {
+
+	public int a = 1;
+	String name = "Karthikeyan";
+	protected String child = "Aashish";
+	private int age = 22;
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+}
+	class ValidateAccessSpecifiers extends AccessSpecifiers {
+
+		public int ageDisplay() {
+			System.out.println(getAge());
+			return getAge();
+		}
+
+		public String nameDisplay() {
+			return child;
+
+		}
+
+		public static void main(String args[]) {
+
+			ValidateAccessSpecifiers ac = new ValidateAccessSpecifiers();
+			ac.ageDisplay();
+			ac.nameDisplay();
+
+		}
+
+	}

@@ -1,0 +1,27 @@
+package faith.success;
+
+import java.util.Scanner;
+
+public class SwapNumbers {
+
+	public static void main(String[] args) {
+
+		System.out.println("Enter the First Number:");
+		
+		Scanner sc = new Scanner(System.in);
+		int firstNo = sc.nextInt();
+		
+		System.out.println("Enter the Second Number:");
+		int secondNo = sc.nextInt();
+		int temp = 0;
+		
+		firstNo=temp;
+		firstNo=secondNo;
+		temp=secondNo;
+		
+		System.out.println(firstNo);
+		System.out.println(secondNo);
+
+}
+
+}

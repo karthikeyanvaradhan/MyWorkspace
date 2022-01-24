@@ -1,0 +1,8 @@
+Feature: Gmail Login
+Scenario: Gmail Login by passing username and password from Feature File
+Given I want to open Chrome webBrowser
+And Enter Gmail Url
+When I Enter Username "vkarthikeyan@gmail.com"
+And Click on Next Button
+And I Enter Password "k2Qa@c5o"
+Then I Click on NextButton for Login

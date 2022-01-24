@@ -1,0 +1,51 @@
+package faith.success;
+
+import java.util.Scanner;
+
+import javax.rmi.CORBA.StubDelegate;
+
+public class ArrayTest {
+
+	int[] stdID = new int[] { 1, 2, 3, 4, 5, 6 };
+
+	//String[] stdName = new String[] {"gopal","raja","stephen"};
+
+	String[] stdName = new String[6];
+
+
+	public void arrInput() {
+		
+		String [] a = new String[6];
+
+		for (int i = 0; i < stdName.length; i++) {
+
+			
+			Scanner sc = new Scanner(System.in);
+			
+			System.out.print("Please Enter the Name of" + " " + "Student" + " " + j + " " + ":");
+
+			String nameofstd = sc.next();
+			
+			stdName[i] = nameofstd;
+			
+			System.out.println(stdName[i]);		
+			
+		
+		for(int j=0;j<i;j++){
+				
+						
+			stdName[i]=a[j];
+			
+		}
+	  }	
+		String [] totStud = new String []{a[j]};
+	}
+
+	public static void main(String[] args) {
+
+		ArrayTest ar = new ArrayTest();
+		ar.arrInput();
+
+	}
+
+}

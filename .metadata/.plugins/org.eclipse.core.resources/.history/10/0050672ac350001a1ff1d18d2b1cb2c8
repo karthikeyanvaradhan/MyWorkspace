@@ -1,0 +1,25 @@
+package executionEngine;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+
+public class DriverScript {
+	
+	private static WebDriver driver=null;
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.ie.driver", "C:\\Users\\vkarthikeyan\\workspace\\Selenium\\HybridFramework\\src\\main\\resources\\browserDriverExeFile\\IEDriverServer.exe");
+		driver = new InternetExplorerDriver();
+		driver.manage().window().maximize();
+		driver.get("http://shop.demoqa.com/");
+		driver.findElement(By.linkText("My Account")).click();
+		driver.findElement(By.xpath("//input[@id='username']"));
+		driver.findElement(By.xpath("//input[@id='password']"));
+		driver.findElement(By.xpath("//button[@name='login']")).click();
+		
+	}
+
+}

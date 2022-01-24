@@ -1,0 +1,23 @@
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class TestProgramRunner {
+
+	public TestProgramRunner() {
+		
+	}
+
+	public static void main(String[] args) {
+		
+		TestProgramRunner();
+
+	}
+
+	private static void TestProgramRunner() {
+		SimpleDateFormat sdate = new SimpleDateFormat("dd");
+		Date currentDate = new Date();
+		System.out.println(currentDate);
+		
+	}
+
+}

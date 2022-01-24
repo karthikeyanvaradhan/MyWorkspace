@@ -1,0 +1,19 @@
+package executionEngine;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class DriverScript {
+	
+	private static WebDriver driver=null;
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.gecko.driver", "C:\\Users\\vkarthikeyan\\workspace\\Selenium\\HybridFramework\\src\\main\\resources\\browserDriverExeFile\\geckodriver.exe");
+		driver = new FirefoxDriver();
+		driver.get("http://shop.demoqa.com/");
+		
+		
+	}
+
+}

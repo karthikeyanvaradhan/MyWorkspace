@@ -1,0 +1,26 @@
+package faith.success;
+
+import java.util.Scanner;
+
+public class ReverseString {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your Name"+"\t");
+		String input = sc.nextLine();
+		System.out.println("The Entered Input String Value is:"+" "+input);
+		sc.close();
+		
+		String [] temp= new String[input.length()];
+		
+		for(int i=input.length();i>0;i--){
+		
+			temp[i] = temp[i]+input.charAt(i);
+		
+			
+		}
+		System.out.println(temp);
+	}
+
+}

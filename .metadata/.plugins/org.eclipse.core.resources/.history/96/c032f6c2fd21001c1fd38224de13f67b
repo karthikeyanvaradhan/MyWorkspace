@@ -1,0 +1,28 @@
+package testPrograms;
+
+public class NewConst {
+
+	public NewConst() {
+		System.out.println("Hi I am a Default Contructor");
+
+	}
+
+	public NewConst(String cons) {
+		System.out.println("Hi I am an Single Parameter Contructor");
+
+	}
+
+	public NewConst(int thirdcons, String cons) {
+		System.out.println("Hi I am an Two Parameter Contructor"+"First Parameter"+"Second Parameter"+thirdcons+cons);
+		//System.out.println("Hi I am an Two Parameter Contructor"+cons);
+
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		NewConst constr = new NewConst();
+		
+		
+	}
+
+}

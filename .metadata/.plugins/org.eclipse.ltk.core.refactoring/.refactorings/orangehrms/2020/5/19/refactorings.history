@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 elements to &apos;BrowserExeFiles&apos;&#x0D;&#x0A;- Original project: &apos;orangehrms&apos;&#x0D;&#x0A;- Destination element: &apos;BrowserExeFiles&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     chromedriver.exe&#x0D;&#x0A;     IEDriverServer.exe&#x0D;&#x0A;     geckodriver.exe" description="Copy files" element1="src/main/resources/BrowserExeFile/chromedriver.exe" element2="src/main/resources/BrowserExeFile/IEDriverServer.exe" element3="src/main/resources/BrowserExeFile/geckodriver.exe" files="3" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1588817883443" target="/keyword-driven/src/main/resources/BrowserExeFiles" units="0" version="1.0"/>
+</session>

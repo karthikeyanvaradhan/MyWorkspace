@@ -1,0 +1,10 @@
+package faith.success;
+
+public class StringBuilderBufferClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

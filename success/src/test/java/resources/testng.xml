@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Demo Suite">
+
+	<!-- <test name="OrangeHRMSLogin"> <classes> <class name="testNGPrograms.OrangeHrms"> 
+		<methods> <include name="launchBrowser" /> <include name="loginHrms" /> <include 
+		name="verifyLogin" /> </methods> </class> </classes> </test> -->
+
+	<test name="GoogleLogin">
+		<classes>
+			<class name="testNGPrograms.GoogleFacebook">
+				<methods>
+					<include name="googlePage" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="FaceBookLogin">
+		<classes>
+			<class name="testNGPrograms.GoogleFacebook">
+				<methods>
+					<include name="faceBookPage" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+</suite>

@@ -1,0 +1,42 @@
+package faith.success;
+
+import java.util.Scanner;
+
+public class ArrayTest {
+
+	int[] stdID = new int[] { 1, 2, 3, 4, 5, 6 };
+
+	String[] stdName = new String[6];
+	
+	
+
+	public void arrInput() {
+
+		Scanner sc = new Scanner(System.in);
+
+		for (int i = 1; i < stdName.length; i++) {
+
+			System.out.print("Please Enter the Name of" + "" + i + "" + "Student");
+
+			String nameStud = sc.nextLine();
+
+			stdName[i] = nameStud;
+			String stdList[] = stdName;
+
+		}
+		
+		System.out.println(stdName);
+
+	}
+
+	public static void main(String[] args) {
+		
+		ArrayTest ar = new ArrayTest();
+		
+
+		
+		
+		
+	}
+
+}

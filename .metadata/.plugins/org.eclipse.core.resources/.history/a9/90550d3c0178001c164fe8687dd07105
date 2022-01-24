@@ -1,0 +1,30 @@
+package faith.success;
+
+public class StringClass {
+	
+	
+public void strStoreMem(){
+	
+
+	String i ="karthikeyan";
+	String j ="karthikeyan";
+	
+	System.out.println("The value of i:"+" "+i);
+	System.out.println("The value of j:"+" "+j);
+	
+	
+	String k = new String("Hello");
+	System.out.println("The value of k after New Object:"+" "+k);
+	
+	k="raja";
+	System.out.println("The value of k update Reference:"+" "+k);
+}
+
+	public static void main(String[] args) {
+
+		StringClass strclass = new StringClass();
+		strclass.strStoreMem();
+		
+	}
+
+}

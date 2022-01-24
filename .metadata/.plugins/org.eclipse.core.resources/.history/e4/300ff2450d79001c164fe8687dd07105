@@ -1,0 +1,12 @@
+package com.webPage.sauceDemo;
+
+public class LoginPage {
+	
+	
+	public void browserLaunch(){
+		
+		WedDriverManager.
+	}
+	
+
+}

@@ -1,0 +1,17 @@
+package bounceback;
+
+import org.openqa.selenium.By;
+
+public class DropDownTest extends ElementTest {
+
+	public void driverStart() {
+		super.webDriver();
+	}
+
+	public void openWebPage(){
+		
+		driver.get("https://www.softwaretestingmaterial.com/sample-webpage-to-automate/");
+		driver.findElement(By.className("spTextField"));
+	}
+	
+}

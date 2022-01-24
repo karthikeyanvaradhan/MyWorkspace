@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;CollectionTest.java&apos; to &apos;ElementLocation/src/main/java/bounceback&apos;&#x0D;&#x0A;- Original project: &apos;ElementLocation&apos;&#x0D;&#x0A;- Destination element: &apos;ElementLocation/src/main/java/bounceback&apos;&#x0D;&#x0A;- Original element: &apos;com.allelements.locating.CollectionTest.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src\/main\/java&lt;bounceback" element1="/src\/main\/java&lt;com.allelements.locating{CollectionTest.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1637131253092" units="1" version="1.0"/>
+</session>

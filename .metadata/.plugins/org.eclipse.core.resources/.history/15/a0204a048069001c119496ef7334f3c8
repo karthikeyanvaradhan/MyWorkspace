@@ -1,0 +1,111 @@
+package seleniumPrograms;
+
+import java.util.Iterator;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.junit.internal.builders.IgnoredClassRunner;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class ElementLocatorsTest {
+
+	static WebDriver driver;
+
+	public static void main(String[] args) {
+
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\vkarthikeyan\\workspace\\success\\src\\test\\java\\chromedriver.exe");
+
+		driver = new ChromeDriver();
+
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+
+		/*
+		 * driver.get("https://www.facebook.com/");
+		 * driver.findElement(By.cssSelector("#email")).sendKeys("Karthikeyan");
+		 * driver.findElement(By.cssSelector("input[type='password']")).sendKeys
+		 * ("Karyn");
+		 */
+
+		// driver.close();
+
+		/*
+		 * driver.get("https://parabank.parasoft.com/parabank/index.html"); List
+		 * <WebElement> linkTextElements = driver.findElements(By.tagName("a"));
+		 * //System.out.println(linkTextElements.toString());
+		 * 
+		 * for(WebElement tagName :linkTextElements){
+		 * 
+		 * System.out.println(tagName.getText());
+		 * 
+		 * }
+		 * 
+		 * 
+		 * 
+		 */
+
+		// ---- select value from drop down query
+
+		/*
+		 * driver.get("http://demo.guru99.com/test/newtours/register.php");
+		 * 
+		 * try {
+		 * 
+		 * WebElement dropDown =
+		 * driver.findElement(By.xpath("//select[@name='country']"));
+		 * //dropDown.click(); Select selList = new Select(dropDown); List
+		 * <WebElement> noOfOptions = selList.getOptions();
+		 * 
+		 * for (int i = 0; i <= noOfOptions.size()-1; i++) {
+		 * 
+		 * System.out.println(noOfOptions.get(i).getText()); }
+		 * 
+		 * driver.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
+		 * //selList.selectByIndex(4); //selList.selectByValue("BANGLADESH");
+		 * 
+		 * selList.selectByVisibleText("INDIA");
+		 * 
+		 * } catch (Exception e) {
+		 * 
+		 * System.out.println("Element not Found" + e); }
+		 */
+
+		// ---- File Upload
+
+		/*
+		 * driver.get("http://demo.guru99.com/test/upload/"); WebElement upload
+		 * = driver.findElement(By.xpath("//input[@name='uploadfile_0']"));
+		 * upload.
+		 * sendKeys("C:\\Users\\vkarthikeyan\\Desktop\\FHLB\\Topeka\\Production Development\\AMI_ICW_AHP_Test_Pass.docx"
+		 * );
+		 * 
+		 * driver.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
+		 * //driver.close();
+		 */
+
+		// ---- Alert Interface
+
+		driver.get("http://demo.guru99.com/test/delete_customer.php");
+		WebElement custId = driver.findElement(By.xpath("//input[@name='cusid']"));
+		custId.click();
+		custId.sendKeys("123");
+
+		WebElement submit = driver.findElement(By.name("submit"));
+		submit.click();
+
+		Alert al = driver.switchTo().alert();
+		String validMsg = al.getText();
+		System.out.println(validMsg);
+
+		al.accept();
+	}
+
+}

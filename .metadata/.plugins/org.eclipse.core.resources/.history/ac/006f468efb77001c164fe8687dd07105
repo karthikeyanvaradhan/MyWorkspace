@@ -1,0 +1,24 @@
+package faith.success;
+
+public class StringClass {
+	
+	
+public void strStoreMem(){
+	
+
+	String i ="karthikeyan";
+	String j ="karthikeyan";
+	i = "aashish";
+	
+	String k = new String("Hello");
+	k="raja";
+}
+
+	public static void main(String[] args) {
+
+		StringClass strclass = new StringClass();
+		strclass.strStoreMem();
+		
+	}
+
+}

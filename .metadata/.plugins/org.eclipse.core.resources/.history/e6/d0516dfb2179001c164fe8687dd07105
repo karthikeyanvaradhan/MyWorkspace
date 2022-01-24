@@ -1,0 +1,20 @@
+LoginIdElement=//input[@id='user-name']
+LoginPwdElement=//input[@id='password']
+LoginBtnElement=//input[@id='login-button']
+LoginId=standard_user
+LoginPwd=secret_sauce
+MenuLink=//button[@id='react-burger-menu-btn']
+checkLink=https://saucelabs.com/ site
+inventory_item_price=//div[@class='inventory_item_price']
+add_to_cart=//button[@id='add-to-cart-sauce-labs-backpack']
+cart=//a[@class='shopping_cart_link']
+yourcart=//span[contains(text(),'Your Cart')]
+checkoutbtn=//button[@id='checkout']
+checkoutpage=//span[contains(text(),'Checkout: Your Information')]
+firstName=//input[@id='first-name']
+fname=test
+lastName=//input[@id='last-name'
+lname=test1
+zipcode=//input[@id='postal-code']
+zipvalue=600000
+continuebtn=//input[@id='continue']

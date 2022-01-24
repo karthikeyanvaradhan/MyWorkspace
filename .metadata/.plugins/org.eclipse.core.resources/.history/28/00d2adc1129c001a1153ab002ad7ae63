@@ -1,0 +1,59 @@
+package excelMethod;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.HashMap;
+
+import org.apache.poi.hssf.eventusermodel.dummyrecord.LastCellOfRowDummyRecord;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class ExcelDataReader {
+
+	public static String excelReader(String filePath, String sheetName) throws IOException {
+
+		FileInputStream fl = new FileInputStream(filePath);
+		XSSFWorkbook exlwrk = new XSSFWorkbook(fl);
+		XSSFSheet exlsht = exlwrk.getSheet(sheetName);
+
+		HashMap<String, String> keyval = new HashMap<String, String>();
+		//int lastRow = exlsht.getLastRowNum();
+
+		Row headerRow = exlsht.getRow(0);
+		Cell exlCol = headerRow.getCell(0);
+	//	int lastCol = headerRow.getLastCellNum();
+
+		for (int i = 1; i <= exlsht.getPhysicalNumberOfRows(); i++) {
+
+			Row currentRow = exlsht.getRow(i);
+
+			for (int j = 0; j <= currentRow.getPhysicalNumberOfCells(); j++) {
+				
+				Cell currentCell = currentRow.getCell(0);
+				CellType celltype = currentCell.getCellType();
+				
+				if(celltype == CellType.STRING){
+					String strcelval = currentCell.getStringCellValue();
+					System.out.println(strcelval);
+				}
+				else if(celltype == CellType.BLANK)
+					System.out.println("Blank Cell");
+				else if(celltype==CellType.NUMERIC){
+					double numval = currentCell.getNumericCellValue();
+					System.out.println(numval);
+				}
+				
+
+			}
+
+		}
+
+		return null;
+
+	}
+
+}

@@ -1,0 +1,59 @@
+package com.webPage.sauceDemo;
+
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.security.Key;
+import java.util.Properties;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class LoginPage {
+
+	WebDriver driver;
+	File fl;
+	FileInputStream fis;
+	Properties prop;
+
+	public void fileLoader() throws IOException {
+
+		fl = new File(
+				"C:\\Users\\vkarthikeyan\\workspace\\WebPageTest\\src\\test\\resources\\com\\webPage\\sauceDemo\\ResourceData\\PropertiesFile\\datafile.properties");
+		fis = new FileInputStream(fl);
+		prop = new Properties();
+		prop.load(fis);
+
+	}
+
+	public void browserLaunch() {
+
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+
+	}
+
+	public void sausePageLogin(String url) {
+
+		driver.get(url);
+
+		WebElement userID = driver.findElement(By.xpath(prop.getProperty("LoginIdElement")));
+		userID.sendKeys(prop.getProperty("LoginId"));
+
+		WebElement userPwd = driver.findElement(By.xpath(prop.getProperty("LoginPwdElement")));
+		userID.sendKeys(prop.getProperty("LoginPwd"));
+
+	}
+
+}

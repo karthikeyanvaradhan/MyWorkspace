@@ -1,0 +1,72 @@
+package excelMethod;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.apache.poi.hssf.eventusermodel.dummyrecord.LastCellOfRowDummyRecord;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class ExcelDataReader {
+
+	public static String excelReader(String filePath, String sheetName) throws IOException {
+
+		FileInputStream fl = new FileInputStream(filePath);
+		XSSFWorkbook exlwrk = new XSSFWorkbook(fl);
+		XSSFSheet exlsht = exlwrk.getSheet(sheetName);
+
+		HashMap<String,HashMap<String,String>> hm1 = new HashMap<String, HashMap<String,String>>();
+		
+		
+		HashMap<String, String> keyval = new HashMap<String, String>();
+		// int lastRow = exlsht.getLastRowNum();
+
+		Row headerRow = exlsht.getRow(0);
+		Cell exlCol = headerRow.getCell(0);
+		// int lastCol = headerRow.getLastCellNum();
+
+		for (int i = 1; i <= exlsht.getPhysicalNumberOfRows(); i++) {
+
+			Row currentRow = exlsht.getRow(i);
+
+			for (int j = 0; j <= currentRow.getPhysicalNumberOfCells(); j++) {
+
+				Cell currentCell = currentRow.getCell(0);
+				CellType celltype = currentCell.getCellType();
+
+				if (celltype == CellType.STRING) {
+					String strcelval = currentCell.getStringCellValue();
+					keyval.put(headerRow.getCell(j).getStringCellValue(), strcelval);
+					System.out.println(strcelval);
+				} else if (celltype == CellType.BLANK)
+					System.out.println("Blank Cell");
+
+				else if (celltype == CellType.NUMERIC) {
+					double numval = currentCell.getNumericCellValue();
+					keyval.put(headerRow.getCell(j).getStringCellValue(), String.valueOf(numval));
+					System.out.println(numval);
+					
+					for(Map.Entry<String,String> : keyval.entrySet()){
+						
+					}
+					
+					
+				}
+				
+				
+
+			}
+
+		}
+
+		return null;
+
+	}
+
+}

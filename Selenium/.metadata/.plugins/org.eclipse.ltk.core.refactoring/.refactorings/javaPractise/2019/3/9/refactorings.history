@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;inputFile.xlsx&apos; to &apos;testdata&apos;&#x0D;&#x0A;- Original project: &apos;javaPractise&apos;&#x0D;&#x0A;- Destination element: &apos;testdata&apos;&#x0D;&#x0A;- Original element: &apos;inputFile.xlsx&apos;" description="Copy file" element1="src/test/resources/DataFile/inputFile.xlsx" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1551427369127" target="/webapp/src/test/resources/com/File/testdata" units="0" version="1.0"/>
+</session>

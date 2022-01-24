@@ -1,0 +1,26 @@
+package excelMethod;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.HashMap;
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class ExcelDataReader {
+	
+	
+	public static HashMap<String,String> excelReader(String filePath,String sheetName) throws IOException{
+		
+		FileInputStream fl = new FileInputStream(filePath);
+		XSSFWorkbook exlwrk = new XSSFWorkbook(fl);
+		XSSFSheet exlsht = exlwrk.getSheet(sheetName);
+		
+		
+		return null;
+		
+		
+	}
+
+}

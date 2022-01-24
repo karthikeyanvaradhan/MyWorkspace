@@ -1,0 +1,36 @@
+package bounceback;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
+public class DropDownTest extends ElementTest {
+
+	public void driverStart() {
+		super.webDriver();
+	}
+
+	public void openWebPage(){
+		
+		driver.get("https://www.softwaretestingmaterial.com/sample-webpage-to-automate/");
+		driver.manage().window().maximize();
+		WebElement dropDownElement = driver.findElement(By.className("spTextField"));
+		dropDownElement.click();
+		
+		Select dropDownItems = new Select(dropDownElement);
+		
+		List <WebElement> options = dropDownItems.getOptions();
+		int val = options.size()-1;
+		
+		for(int i=0;i<=val;i++){
+			
+			String text = options.get(i).getText();
+			System.out.println(text);
+		}
+		
+		
+	}
+	
+}

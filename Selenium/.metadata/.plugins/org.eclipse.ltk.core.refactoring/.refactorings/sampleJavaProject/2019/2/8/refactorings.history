@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;sampleJavaProject.LastModifiedIem&apos; to &apos;LastModifiedItem&apos;&#x0D;&#x0A;- Original project: &apos;sampleJavaProject&apos;&#x0D;&#x0A;- Original element: &apos;sampleJavaProject.LastModifiedIem&apos;&#x0D;&#x0A;- Renamed element: &apos;sampleJavaProject.LastModifiedItem&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;LastModifiedIem&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;sampleJavaProject{LastModifiedIem.java[LastModifiedIem" matchStrategy="1" name="LastModifiedItem" qualified="false" references="true" similarDeclarations="false" stamp="1550497325309" textual="false" version="1.0"/>
+</session>

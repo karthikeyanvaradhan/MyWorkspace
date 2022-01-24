@@ -1,0 +1,51 @@
+package interviewPractise;
+
+import java.util.Arrays;
+
+public class SortPgm {
+
+	int listNo[] = new int[5];
+
+	String [] listName = new String[]{"jack","mac","rack","pack"};
+	
+	
+	public void sortMethod() {
+
+		listNo[0] = 50;
+		listNo[1] = 20;
+		listNo[2] = 90;
+		listNo[3] = 22;
+		listNo[4] = 15;
+		//listNo[5] = 60;
+		
+		System.out.println(listName.length);
+		
+	Arrays.sort(listNo);
+
+		for (int i = 0; i < listNo.length; i++) {
+
+			System.out.println(listNo[i]);
+
+		}
+
+		Arrays.sort(listName);
+
+		System.out.println("\n");
+		
+		for(String listTrav : listName){
+			
+			System.out.println(listTrav);
+			
+		}
+
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		SortPgm sortArray = new SortPgm();
+		sortArray.sortMethod();
+		
+	}
+
+}
